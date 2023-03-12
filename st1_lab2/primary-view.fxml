@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="397.0" prefWidth="388.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="w65479.st1_lab2.PrimaryController">
+   <children>
+      <MenuBar prefHeight="20.0" prefWidth="388.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="207.0" prefWidth="388.0">
+         <children>
+            <VBox prefHeight="190.0" prefWidth="183.0" spacing="20.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" onAction="#setBlue" text="Niebieski">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="color" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" onAction="#setGreen" text="Zielony" toggleGroup="$color" />
+                  <RadioButton mnemonicParsing="false" onAction="#setRed" text="Czerowny" toggleGroup="$color" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="190.0" prefWidth="183.0" spacing="20.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" onAction="#set1" text="1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="numbers1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" onAction="#set2" text="2" toggleGroup="$numbers1" />
+                  <RadioButton mnemonicParsing="false" onAction="#set3" text="3" toggleGroup="$numbers1" />
+                  <Label fx:id="label" prefHeight="24.0" prefWidth="91.0" text="Label" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="190.0" prefWidth="183.0" spacing="20.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <CheckBox mnemonicParsing="false" text="CheckBox" />
+                  <CheckBox mnemonicParsing="false" text="CheckBox" />
+                  <CheckBox mnemonicParsing="false" text="CheckBox" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="165.0" prefWidth="81.0" spacing="20.0">
+                           <children>
+                              <RadioButton mnemonicParsing="false" onAction="#showCalendar" text="1">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="imageGroup" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" onAction="#showContacts" text="2" toggleGroup="$imageGroup" />
+                              <RadioButton mnemonicParsing="false" onAction="#setHome" text="3" toggleGroup="$imageGroup" />
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <ImageView fx:id="image" fitHeight="119.0" fitWidth="187.0" layoutX="101.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
