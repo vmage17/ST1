@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="358.0" prefWidth="271.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="w65479.st1_lab3.PrimaryController">
+   <children>
+      <TableView fx:id="tabela" prefHeight="260.0" prefWidth="263.0">
+        <columns>
+          <TableColumn prefWidth="46.0" text="ID" />
+          <TableColumn prefWidth="224.0" text="Dane">
+               <columns>
+                  <TableColumn fx:id="col_imie" prefWidth="104.0" text="Imię" />
+                  <TableColumn fx:id="col_nazwisko" minWidth="0.0" prefWidth="120.0" text="Nazwisko" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <AnchorPane prefHeight="102.0" prefWidth="271.0">
+         <children>
+            <TextField fx:id="imieToAdd" layoutX="14.0" layoutY="24.0" prefHeight="25.0" prefWidth="114.0" />
+            <TextField fx:id="nazwiskoToAdd" layoutX="143.0" layoutY="24.0" prefHeight="25.0" prefWidth="114.0" />
+            <Button layoutX="110.0" layoutY="59.0" mnemonicParsing="false" onAction="#dodaj" text="Dodaj" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
